@@ -31,11 +31,24 @@ public class Controller {
     public void stepByStep(ActionEvent actionEvent) throws FileNotFoundException {
         String flow=readFile();//текст нижнього регістру, тільки за заданим алфавітом
         Map objects=fillNumbers(flow);//порахованні
-        System.out.println(objects.toString());
+        Map liters=DividedCharacter(Integer.parseInt(var.getText()),objects);
+
 
 
 
     }
+
+    private Map DividedCharacter(int var, Map objects) {
+        var=15;
+        Map frequency=new HashMap<Character,Integer>();
+        var=var+2;
+        int divDiapaz= (int) Math.ceil((double)objects.size()/(double) var);
+        System.out.println(divDiapaz);
+
+
+        return frequency;
+    }
+
 
     private HashMap fillNumbers(String flow) {
         int temp;
@@ -94,4 +107,6 @@ public class Controller {
         }
         return newFlow;
     }
+
+
 }

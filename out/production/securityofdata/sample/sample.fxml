@@ -18,7 +18,7 @@
             <Label layoutX="7.0" layoutY="25.0" text="Файл" />
             <TextField fx:id="inputFile" layoutX="35.0" layoutY="21.0" />
             <Label layoutX="197.0" layoutY="25.0" text="Вибор варіанту" />
-            <TextField layoutX="292.0" layoutY="21.0" prefHeight="25.0" prefWidth="48.0" />
+            <TextField fx:id="var" layoutX="292.0" layoutY="21.0" prefHeight="25.0" prefWidth="48.0" />
          </children>
       </Pane>
    </top>

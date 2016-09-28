@@ -83,11 +83,12 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+            <state relative-caret-position="196">
+              <caret line="44" column="76" selection-start-line="44" selection-start-column="76" selection-end-line="44" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
+                <element signature="method#readFile#0;class#Controller#0" expanded="false" />
                 <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
@@ -97,8 +98,8 @@
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state relative-caret-position="245">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -614,12 +615,12 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1475079358367" duration="11820000" />
+      <workItem from="1475079358367" duration="15082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13122000" />
+    <option name="totallyTimeSpent" value="16384000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -695,6 +696,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
+            <element signature="method#readFile#0;class#Controller#0" expanded="false" />
             <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
@@ -731,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        <state relative-caret-position="245">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -742,11 +744,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        <state relative-caret-position="196">
+          <caret line="44" column="76" selection-start-line="44" selection-start-column="76" selection-end-line="44" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
+            <element signature="method#readFile#0;class#Controller#0" expanded="false" />
             <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
