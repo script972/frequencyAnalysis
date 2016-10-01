@@ -1,22 +1,20 @@
 package sample;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.TextField;
 import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.*;
 import java.lang.Character;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Controller {
 
@@ -26,28 +24,158 @@ public class Controller {
     TextField var;
     @FXML
     static Stage stage = new Stage();
+    @FXML
+    WebView webView;
+    @FXML
+    LineChart graphics;
 
 
     public void stepByStep(ActionEvent actionEvent) throws FileNotFoundException {
-        String flow=readFile();//текст нижнього регістру, тільки за заданим алфавітом
-        Map objects=fillNumbers(flow);//порахованні
-        Map liters=DividedCharacter(Integer.parseInt(var.getText()),objects);
-
+       // String flow=readFile();//текст нижнього регістру, тільки за заданим алфавітом
+       // Map objects=fillNumbers(flow);//порахованні
+       // ArrayList liters=DividedCharacter(Integer.parseInt(var.getText()),objects); //diveded liters
+       // System.out.println(liters);
+       // generateHtml(liters, flow);
+        //loadWeb("file:///E:/JAVA/securityofdata/readyHtml.html");
+        fillGraph();
 
 
 
     }
 
-    private Map DividedCharacter(int var, Map objects) {
+    private void fillGraph() {
+
+    }
+
+
+    private void loadWeb(String s) {
+        WebEngine webEngine = webView.getEngine();
+        webEngine.load(s);
+    }
+
+    private void generateHtml(ArrayList liters, String flow) {
+        String html="";
+        Iterator iterator;
+        Figure ob;
+        for (int i = 0; i < flow.length(); i++) {
+            iterator=liters.iterator();
+            while(iterator.hasNext())
+            {
+                ob= (Figure) iterator.next();
+                if (ob.getFigure()==flow.charAt(i))
+                {
+                    html=html+"<span style='color:"+chooseColor(ob.getBasket())+"'>"+ob.getFigure().toString()+"</span>";
+                }
+
+            }
+
+        }
+        outFile("readyHtml.html",html);
+        System.out.println("STOP");
+
+    }
+    
+    private String chooseColor(int number)
+    {
+        switch (number)
+        {
+            case 1: return  "#00FFFF";
+            case 2: return  "#000000";
+            case 3: return  "#0000FF";
+            case 4: return  "#FF00FF";
+            case 5: return  "#808080";
+            case 6: return  "#008000";
+            case 7: return  "#00FF00";
+            case 8: return  "#800000";
+            case 9: return  "#000080";
+            case 10: return  "#808000";
+            case 11: return  "#800080";
+            case 12: return  "#FF0000";
+            case 13: return  "#C0C0C0";
+            case 14: return  "#008080";
+            case 15: return  "#FFFFFF";
+            case 16: return  "#FFFF00";
+            case 17: return  "#ff8600";
+            case 18: return  "#607d8b";
+            case 19: return  "#83608b";
+            case 20: return  "#648b60";
+        }
+        return "Black";
+
+    }
+
+    private void outFile(String nameOutFile, String text) {
+        File file = new File(nameOutFile);
+
+        try {
+            //проверяем, что если файл не существует то создаем его
+            if(!file.exists()){
+                file.createNewFile();
+            }
+
+            //PrintWriter обеспечит возможности записи в файл
+            PrintWriter out = new PrintWriter(file.getAbsoluteFile());
+
+            try {
+                //Записываем текст у файл
+                out.print(text);
+            } finally {
+                //После чего мы должны закрыть файл
+                //Иначе файл не запишется
+                out.close();
+            }
+        } catch(IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    private ArrayList DividedCharacter(int var, Map objects) {
+        Character figure;
+        int number=0; int basket=0;
         var=15;
-        Map frequency=new HashMap<Character,Integer>();
+        ArrayList frequency=new ArrayList<Figure>();
         var=var+2;
-        int divDiapaz= (int) Math.ceil((double)objects.size()/(double) var);
+        int divDiapaz= (int) Math.ceil ((double)objects.size()/(double) var);//number of diapazon
+        System.out.println(objects.size());
         System.out.println(divDiapaz);
+
+        //sort hashMap by value and pull in List - sortingLiter
+        List sortingLiter = new ArrayList(objects.entrySet());
+        Collections.sort(sortingLiter, new Comparator<Map.Entry<Character, Integer>>() {
+            @Override
+            public int compare(Map.Entry<Character, Integer> a, Map.Entry<Character, Integer> b) {
+                return a.getValue() - b.getValue();
+            }
+        });
+      //  System.out.println(sortingLiter);
+       // System.out.println("qwr="+sortingLiter.get(6).toString().split("=")[0]);
+        char c=sortingLiter.get(6).toString().split("=")[0].toString().charAt(0);
+        //System.out.println("c "+c);
+       // System.out.println(sortingLiter.get(6).toString().split("=")[1].toString());
+        int count=0; int next=1;
+        for (int i = 0; i < sortingLiter.size(); i++) {
+            figure=sortingLiter.get(i).toString().split("=")[0].toString().charAt(0);
+            number= Integer.parseInt(sortingLiter.get(6).toString().split("=")[1].toString());
+            frequency.add(new Figure(figure, number,next));
+            count++;
+            if(count>=divDiapaz) {
+                count = 0;
+                next++;
+            }
+
+        }
+       // System.out.println(frequency);
+
+
+       // System.out.println(frequency);
+        //System.out.println(frequency);
+
 
 
         return frequency;
     }
+
 
 
     private HashMap fillNumbers(String flow) {
@@ -66,10 +194,6 @@ public class Controller {
         }
         return (HashMap) liter;
     }
-
-
-
-
 
 
 
