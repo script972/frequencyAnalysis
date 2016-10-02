@@ -36,6 +36,8 @@ public class Controller {
     @FXML
     private LineChart graphics;
     @FXML
+    private LineChart GraphGroup;
+    @FXML
     private Label fileReady;
     @FXML
     private Label graphReady;
@@ -95,10 +97,34 @@ public class Controller {
             series.getData().add(new XYChart.Data(figure.getFigure().toString(), figure.getNumber()));
         }
         graphics.getData().addAll(series);
-        fillGraphBlock( liters);
+        fillGraphBlock(liters);
     }
 
     private void fillGraphBlock(ArrayList liters) {
+        Iterator iterator=liters.iterator();
+        Figure figure;
+  /*      String str="";
+        int next=0;
+        HashMap basket=new HashMap<Integer, Character>()
+        while (iterator.hasNext())
+        {
+            figure=(Figure) iterator.next();
+            figure.getBasket();
+
+
+        }*/
+
+
+        XYChart.Series series = new XYChart.Series();
+        series.setName("Frequency analize of blocks");
+        int next=1;
+        iterator=liters.iterator();
+
+        while (iterator.hasNext()) {
+            figure=(Figure) iterator.next();
+            series.getData().add(new XYChart.Data(figure.getFigure().toString(), figure.getNumber()));
+        }
+        GraphGroup.getData().addAll(series);
 
     }
 
@@ -183,6 +209,26 @@ public class Controller {
         } catch(IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public boolean saveData(String nameOutFile, String text) {
+        try {
+            OutputStream outputStream = new FileOutputStream(nameOutFile);
+            StringBuilder builder = new StringBuilder(text);
+            /*for (Map.Entry<String, String> authEntry : nameOutFile.entrySet()) {
+                builder.append(authEntry.getKey())
+                        .append(' ')
+                        .append(authEntry.getValue())
+                        .append('\n');
+            }*/
+            outputStream.write(builder.toString().getBytes());
+            outputStream.close();
+        } catch (FileNotFoundException e) {
+            return false;
+        } catch (IOException e) {
+            return false;
+        }
+        return true;
     }
 
 
