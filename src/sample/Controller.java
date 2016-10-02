@@ -3,47 +3,102 @@ package sample;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.*;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.*;
 import java.lang.*;
 import java.lang.Character;
 import java.util.*;
+import java.util.List;
 
 public class Controller {
 
     @FXML
-    TextField inputFile;
+    private TextField inputFile;
     @FXML
-    TextField var;
+    private TextField var;
     @FXML
     static Stage stage = new Stage();
     @FXML
-    WebView webView;
+    private WebView webView;
     @FXML
-    LineChart graphics;
+    private LineChart graphics;
+    @FXML
+    private Label fileReady;
+    @FXML
+    private Label graphReady;
+    @FXML
+    private AnchorPane bottomSide;
+    @FXML
+    private BorderPane root;
+    @FXML
+    private GridPane gridPane;
 
 
     public void stepByStep(ActionEvent actionEvent) throws FileNotFoundException {
-       // String flow=readFile();//текст нижнього регістру, тільки за заданим алфавітом
-       // Map objects=fillNumbers(flow);//порахованні
-       // ArrayList liters=DividedCharacter(Integer.parseInt(var.getText()),objects); //diveded liters
-       // System.out.println(liters);
-       // generateHtml(liters, flow);
-        //loadWeb("file:///E:/JAVA/securityofdata/readyHtml.html");
-        fillGraph();
+        String flow=readFile();//текст нижнього регістру, тільки за заданим алфавітом
+        Map objects=fillNumbers(flow);//порахованні
+        ArrayList liters=DividedCharacter(Integer.parseInt(var.getText()),objects); //diveded liters
+        generateHtml(liters, flow);
+        bottomContent(liters);
+        loadWeb("file:///E:/JAVA/securityofdata/readyHtml.html");
+        fillGraph(liters);
 
 
 
     }
 
-    private void fillGraph() {
+    private void bottomContent(ArrayList liters) {
+        Iterator iterator=liters.iterator();
+        Figure ob;
+        Integer basket;
+        String figure;
+        Integer number;
+        String color="";
+        int count=0;
+        Label label;
+        System.out.println(liters);
+        while (iterator.hasNext())
+        {
+            ob= (Figure) iterator.next();
+            figure=ob.getFigure().toString();
+            label = new Label(figure);
+            color=chooseColor(ob.getBasket());
+            label.setStyle("-fx-background-color:"+color+";");
+
+            gridPane.add(label,count,0);
+            count++;
+        }
+
+    }
+
+    private void fillGraph(ArrayList liters) {
+        XYChart.Series series = new XYChart.Series();
+        series.setName("Frequency analiz");
+        int next=1;
+        Iterator iterator=liters.iterator();
+        Figure figure;
+        while (iterator.hasNext()) {
+            figure=(Figure) iterator.next();
+            series.getData().add(new XYChart.Data(figure.getFigure().toString(), figure.getNumber()));
+        }
+        graphics.getData().addAll(series);
+        fillGraphBlock( liters);
+    }
+
+    private void fillGraphBlock(ArrayList liters) {
 
     }
 
@@ -51,6 +106,7 @@ public class Controller {
     private void loadWeb(String s) {
         WebEngine webEngine = webView.getEngine();
         webEngine.load(s);
+        fileReady.setVisible(true);
     }
 
     private void generateHtml(ArrayList liters, String flow) {
@@ -71,7 +127,7 @@ public class Controller {
 
         }
         outFile("readyHtml.html",html);
-        System.out.println("STOP");
+
 
     }
     
@@ -133,13 +189,9 @@ public class Controller {
     private ArrayList DividedCharacter(int var, Map objects) {
         Character figure;
         int number=0; int basket=0;
-        var=15;
         ArrayList frequency=new ArrayList<Figure>();
         var=var+2;
         int divDiapaz= (int) Math.ceil ((double)objects.size()/(double) var);//number of diapazon
-        System.out.println(objects.size());
-        System.out.println(divDiapaz);
-
         //sort hashMap by value and pull in List - sortingLiter
         List sortingLiter = new ArrayList(objects.entrySet());
         Collections.sort(sortingLiter, new Comparator<Map.Entry<Character, Integer>>() {
@@ -148,15 +200,11 @@ public class Controller {
                 return a.getValue() - b.getValue();
             }
         });
-      //  System.out.println(sortingLiter);
-       // System.out.println("qwr="+sortingLiter.get(6).toString().split("=")[0]);
         char c=sortingLiter.get(6).toString().split("=")[0].toString().charAt(0);
-        //System.out.println("c "+c);
-       // System.out.println(sortingLiter.get(6).toString().split("=")[1].toString());
         int count=0; int next=1;
         for (int i = 0; i < sortingLiter.size(); i++) {
             figure=sortingLiter.get(i).toString().split("=")[0].toString().charAt(0);
-            number= Integer.parseInt(sortingLiter.get(6).toString().split("=")[1].toString());
+            number= Integer.parseInt(sortingLiter.get(i).toString().split("=")[1].toString());
             frequency.add(new Figure(figure, number,next));
             count++;
             if(count>=divDiapaz) {
@@ -165,13 +213,6 @@ public class Controller {
             }
 
         }
-       // System.out.println(frequency);
-
-
-       // System.out.println(frequency);
-        //System.out.println(frequency);
-
-
 
         return frequency;
     }
