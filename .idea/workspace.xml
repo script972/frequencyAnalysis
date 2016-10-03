@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/securityofdata/sample/Controller$1.class" afterPath="$PROJECT_DIR$/out/production/securityofdata/sample/Controller$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/securityofdata/sample/Controller.class" afterPath="$PROJECT_DIR$/out/production/securityofdata/sample/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/securityofdata/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/securityofdata/sample/sample.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readyHtml.html" afterPath="$PROJECT_DIR$/readyHtml.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" />
@@ -90,22 +89,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+            <state relative-caret-position="459">
+              <caret line="150" column="36" selection-start-line="150" selection-start-column="36" selection-end-line="150" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-                <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-                <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
                 <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
                 <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+                <element signature="method#saveData#0;class#Controller#0" expanded="false" />
                 <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
                 <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
                 <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-                <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -134,17 +131,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Draw.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Draw.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Draw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-              <folding>
-                <element signature="e#634#650#0" expanded="false" />
-                <element signature="e#792#808#0" expanded="false" />
-                <element signature="e#1376#1377#0" expanded="false" />
-                <element signature="e#1404#1405#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,8 +144,8 @@
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="68" column="64" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="64" />
+            <state relative-caret-position="259">
+              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -191,8 +183,8 @@
         <option value="$PROJECT_DIR$/src/sample/Figure.java" />
         <option value="$PROJECT_DIR$/src/sample/Draw.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
       </list>
     </option>
   </component>
@@ -225,7 +217,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -238,14 +230,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -261,7 +246,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../security" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -657,7 +642,8 @@
       <workItem from="1475340832660" duration="11940000" />
       <workItem from="1475404601936" duration="9777000" />
       <workItem from="1475417967107" duration="6914000" />
-      <workItem from="1475442204988" duration="4627000" />
+      <workItem from="1475442204988" duration="5649000" />
+      <workItem from="1475477738569" duration="10945000" />
     </task>
     <task id="LOCAL-00001" summary="one graph">
       <created>1475424603837</created>
@@ -670,7 +656,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61622000" />
+    <option name="totallyTimeSpent" value="73589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -690,7 +676,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31230283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -737,29 +723,35 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
-          <line>268</line>
+          <line>291</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
-          <line>235</line>
+          <line>258</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
+          <line>212</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
-          <line>286</line>
+          <line>309</line>
           <properties class="sample.Controller" method="readFile" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
-          <line>234</line>
+          <line>257</line>
           <properties class="sample.Controller" method="DividedCharacter" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -787,14 +779,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
             <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
             <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
             <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
             <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,12 +814,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="64" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#634#650#0" expanded="false" />
-            <element signature="e#792#808#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1404#1405#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#575#576#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
+            <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
+            <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
+            <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
+            <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
+            <element signature="method#readFile#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Figure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#373#374#0" expanded="false" />
+            <element signature="e#402#403#0" expanded="false" />
+            <element signature="e#449#450#0" expanded="false" />
+            <element signature="e#485#486#0" expanded="false" />
+            <element signature="e#519#520#0" expanded="false" />
+            <element signature="e#548#549#0" expanded="false" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#629#630#0" expanded="false" />
+            <element signature="e#663#664#0" expanded="false" />
+            <element signature="e#692#693#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Draw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -863,14 +917,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
             <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
             <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
             <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
             <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -900,12 +952,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="31" column="71" selection-start-line="28" selection-start-column="7" selection-end-line="31" selection-end-column="71" />
-          <folding>
-            <element signature="e#634#650#0" expanded="false" />
-            <element signature="e#792#808#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1404#1405#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,14 +986,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
             <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
             <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
             <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
             <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -955,12 +1000,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="31" column="71" selection-start-line="28" selection-start-column="7" selection-end-line="31" selection-end-column="71" />
-          <folding>
-            <element signature="e#634#650#0" expanded="false" />
-            <element signature="e#792#808#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1404#1405#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -994,14 +1034,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
             <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
             <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
             <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
             <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1036,14 +1074,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
             <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
             <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
             <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
             <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1078,14 +1114,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
             <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
             <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
             <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
             <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1120,14 +1154,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
             <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
             <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
             <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
             <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
             <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1212,23 +1244,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Draw.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        <state relative-caret-position="459">
+          <caret line="150" column="36" selection-start-line="150" selection-start-column="36" selection-end-line="150" selection-end-column="36" />
           <folding>
-            <element signature="e#634#650#0" expanded="false" />
-            <element signature="e#792#808#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1404#1405#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
+            <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
+            <element signature="method#outFile#0;class#Controller#0" expanded="false" />
+            <element signature="method#saveData#0;class#Controller#0" expanded="false" />
+            <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
+            <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
+            <element signature="method#readFile#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="68" column="64" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="64" />
+        <state relative-caret-position="259">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1236,22 +1272,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Draw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#bottomContent#0;class#Controller#0" expanded="false" />
-            <element signature="method#loadWeb#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateHtml#0;class#Controller#0" expanded="false" />
-            <element signature="method#chooseColor#0;class#Controller#0" expanded="false" />
-            <element signature="method#outFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#DividedCharacter#0;class#Controller#0" expanded="false" />
-            <element signature="method#fillNumbers#0;class#Controller#0" expanded="false" />
-            <element signature="method#readFile#0;class#Controller#0" expanded="false" />
-            <element signature="method#delNotUkr#0;class#Controller#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

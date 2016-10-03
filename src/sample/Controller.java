@@ -53,12 +53,10 @@ public class Controller {
         String flow=readFile();//текст нижнього регістру, тільки за заданим алфавітом
         Map objects=fillNumbers(flow);//порахованні
         ArrayList liters=DividedCharacter(Integer.parseInt(var.getText()),objects); //diveded liters
-        generateHtml(liters, flow);
+        String html=generateHtml(liters, flow);
         bottomContent(liters);
-        loadWeb("file:///E:/JAVA/securityofdata/readyHtml.html");
+        loadWeb(html);
         fillGraph(liters);
-
-
 
     }
 
@@ -103,39 +101,65 @@ public class Controller {
     private void fillGraphBlock(ArrayList liters) {
         Iterator iterator=liters.iterator();
         Figure figure;
-  /*      String str="";
-        int next=0;
-        HashMap basket=new HashMap<Integer, Character>()
-        while (iterator.hasNext())
+        int numb;
+        int count=0;
+        HashMap basket=new HashMap<Integer,String>();
+        String str;
+        while(iterator.hasNext())
         {
             figure=(Figure) iterator.next();
-            figure.getBasket();
+            numb=figure.getBasket();
+            if (basket.get(numb)==null)
+            {
+                 str=figure.getFigure().toString();
+                 basket.put(numb,str);
+            }else {
+                str= (String) basket.get(numb)+figure.getFigure().toString();
+                basket.put(numb,str);
+            }
+        }
+        System.out.println(basket);
+        HashMap basket1=new HashMap<Integer,Integer>();
+        iterator=liters.iterator();
+        int num;
+        while(iterator.hasNext())
+        {
+            figure=(Figure)iterator.next();
+            numb=figure.getBasket();
+            count=figure.getNumber();
+            if (basket1.get(numb)==null)
+            {
+                basket1.put(numb,count);
+            }
+            else
+            {
+                num= (int) basket1.get(numb);
+                basket1.put(numb,num+count);
+            }
 
-
-        }*/
-
+        }
+        System.out.println("LOLOL1 "+basket1.toString());
+        System.out.println("LOLOL2 "+basket.toString());
 
         XYChart.Series series = new XYChart.Series();
         series.setName("Frequency analize of blocks");
-        int next=1;
-        iterator=liters.iterator();
-
-        while (iterator.hasNext()) {
-            figure=(Figure) iterator.next();
-            series.getData().add(new XYChart.Data(figure.getFigure().toString(), figure.getNumber()));
+        for (int i = 1; i <= basket.size(); i++) {
+            series.getData().add(new XYChart.Data(basket.get(i), basket1.get(i)));
         }
-        GraphGroup.getData().addAll(series);
 
+        GraphGroup.getData().addAll(series);
+        graphReady.setVisible(true);
     }
 
 
     private void loadWeb(String s) {
-        WebEngine webEngine = webView.getEngine();
-        webEngine.load(s);
+        /*WebEngine webEngine = webView.getEngine();
+        webEngine.load(s);*/
+        webView.getEngine().loadContent(s);
         fileReady.setVisible(true);
     }
 
-    private void generateHtml(ArrayList liters, String flow) {
+    private String generateHtml(ArrayList liters, String flow) {
         String html="";
         Iterator iterator;
         Figure ob;
@@ -148,11 +172,10 @@ public class Controller {
                 {
                     html=html+"<span style='color:"+chooseColor(ob.getBasket())+"'>"+ob.getFigure().toString()+"</span>";
                 }
-
             }
-
         }
         outFile("readyHtml.html",html);
+        return html;
 
 
     }

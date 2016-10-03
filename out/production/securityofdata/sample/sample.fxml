@@ -26,7 +26,7 @@
             <Label layoutX="197.0" layoutY="25.0" text="Вибор варіанту" />
             <TextField fx:id="var" layoutX="292.0" layoutY="21.0" prefHeight="25.0" prefWidth="48.0" />
             <Label fx:id="fileReady" layoutX="462.0" text="File Ready" textFill="RED" visible="false" />
-            <Label fx:id="graphReady" layoutX="462.0" text="Graph Ready" textFill="GREEN" visible="false" />
+            <Label fx:id="graphReady" layoutX="462.0" layoutY="29.0" text="Graph Ready" textFill="GREEN" visible="false" />
          </children>
       </Pane>
    </top>
@@ -64,7 +64,7 @@
                       </Tab>
                       <Tab text="Group">
                         <content>
-                          <AnchorPane  minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <LineChart fx:id="GraphGroup" prefHeight="260.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <xAxis>
