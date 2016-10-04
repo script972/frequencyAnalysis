@@ -69,7 +69,6 @@ public class Controller {
         String color="";
         int count=0;
         Label label;
-        System.out.println(liters);
         while (iterator.hasNext())
         {
             ob= (Figure) iterator.next();
@@ -118,7 +117,7 @@ public class Controller {
                 basket.put(numb,str);
             }
         }
-        System.out.println(basket);
+
         HashMap basket1=new HashMap<Integer,Integer>();
         iterator=liters.iterator();
         int num;
@@ -138,8 +137,7 @@ public class Controller {
             }
 
         }
-        System.out.println("LOLOL1 "+basket1.toString());
-        System.out.println("LOLOL2 "+basket.toString());
+
 
         XYChart.Series series = new XYChart.Series();
         series.setName("Frequency analize of blocks");
