@@ -257,7 +257,7 @@ public class Controller {
         Character figure;
         int number=0; int basket=0;
         ArrayList frequency=new ArrayList<Figure>();
-        var=var+2;
+        //var=var+2;//numberVAR+2
         int divDiapaz= (int) Math.ceil ((double)objects.size()/(double) var);//number of diapazon
         //sort hashMap by value and pull in List - sortingLiter
         List sortingLiter = new ArrayList(objects.entrySet());
